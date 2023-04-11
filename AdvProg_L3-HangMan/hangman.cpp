@@ -18,7 +18,7 @@ int generateRandomNumber(const int min, const int max)
 {
     // TODO: Return a random integer number between min and max
     //srand(time(0));
-    return rand()%(max - min) + min;
+    return rand()%(max - min+1) + min;
 }
 
 vector<string> readWordListFromFile(const string& filePath)
@@ -69,7 +69,7 @@ string chooseWordFromList(const vector<string>& wordList, int index)
 {
     // TODO: Return a lowercase word in the index position of the vector wordList.
     string answer;
-    answer = wordList[index-1];
+    answer = wordList[index];
     for(int i=0;i<(int)answer.size();i++){
         answer[i] = tolower(answer[i]);
     }
